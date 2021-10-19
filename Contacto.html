@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Viajero - Contacto</title>
+    <link rel="stylesheet" href="Estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ephesis&family=Nunito:ital,wght@0,200;1,200&family=Scheherazade+New&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="Imagenes PAGINA/Iconos/favicon-32x32.png" type="image/png" sizes="32x32">
+</head>
+    <body class="grid-container">
+
+        <!-- Header y Nav igual en todas las páginas -->
+        <header class="header">
+            <h1>Mundo Viajero</h1>
+        <h3>by  Abril .    Di Stasio </h3>
+        </header>
+
+        <!-- NAV -->
+        <nav class="menu1">
+            <input type="checkbox" id="btn-menu">
+                <label for="btn-menu"><img src="Imagenes PAGINA/Iconos/bars-solid.svg" ></label>
+                 <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Historias.html">Historias</a></li>
+                    <li><a href="Fotografias.html">Fotografías</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                </ul>
+        </nav>
+    
+
+    <!-- Form -->
+    <main>
+       
+        <section>
+            <!-- FORM CON BOOTSTRAP-->
+            <!-- DECLARACIÓN DEL FORM: -->
+                <form name = "formulario"  method="get" target="_blanck" id="form"> CONTACTO
+                    <fieldset> <legend id=legend1>Ingrese sus datos personales</legend>
+
+                    <!--BOOTSTRAP-->
+                      <!--INPUT DE TEXTO - nombre-->
+        
+                    <div class="input-group mb-3" id="input">
+                        <span class="input-group-text" id="basic-addon1">Nombre</span>
+                        <input type="text" class="form-control" id="name" placeholder="Nombre" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+
+                    <figure id="nombreform">
+                        <blockquote class="blockquote">
+                          <p><small>El nombre debe tener al menos 3 caracteres. </p>
+                          </small></blockquote>
+                    </figure>
+
+                      <!--INPUT DE TEXTO - apellido-->
+                    
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Apellido</span>
+                        <input type="text" class="form-control" id="lastname" placeholder="Apellido" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <figure id="apellidoform">
+                        <blockquote class="blockquote">
+                          <p><small>El apellido debe tener al menos 3 caracteres.</p>
+                          </small></blockquote>
+                    </figure>
+
+                      <!--INPUT DE EMAIL - email-->
+                      
+                    <div class="input-group mb-3">
+                        <input type="mail" class="form-control"id="email" placeholder="e-mail@ejemplo.com" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <span class="input-group-text" id="basic-addon2">Mail</span>
+                    </div>
+                    <figure id="mailform">
+                        <blockquote class="blockquote">
+                          <p><small>El correo ingresado no es válido.</p>
+                          </small></blockquote>
+                    </figure>
+
+                      <!--TEXT AREA - comentarios -->
+
+                    <div class="input-group">
+                        <span class="input-group-text">Comentarios</span>
+                        <textarea class="form-control" id="textArea" aria-label="With textarea"></textarea>
+                    </div>
+                    <figure id="comentarioform">
+                        <blockquote class="blockquote">
+                          <p><small>El mensaje debe contener al menos 50 caracteres.</p>
+                          </small></blockquote>
+                    </figure>
+
+                      <!-- BOTÓN -->
+
+                      <div class="col-auto">
+                        <button type="submit" id="submit1" class="btn btn-primary">Enviar</button>
+                      </div>
+                    <br>
+
+                <!--Script BOOTSTRAP:-->
+                <script src="form.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+                </form>
+        </section>
+    </main>
+    
+
+ <footer class="footer1">
+    <h4 id="footer"> &copy; Derechos Reservados - 2021 </h4> 
+</footer>
+
+</body>
+</html>
