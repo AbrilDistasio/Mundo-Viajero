@@ -1,0 +1,505 @@
+/* --- General --- */
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    font-size: 1rem;
+    min-height: 100%;
+}
+
+
+/* ---*******        ********         *******---*/
+/* --- INDEX - uso de Grid para uso general --- */
+
+
+.grid-container > * {
+    padding: 10px;
+    text-align: center;
+}
+    .grid-container{
+    display: grid;
+    gap: 2px;
+    grid-template:
+    "header" 100px
+    "menu" 45px
+    "principal" 
+    "footer" 50px;
+}
+
+
+.header{
+    font-family: 'Nunito', sans-serif;
+    grid-area: header;
+    background-color: rgb(245, 245, 245);
+}
+
+
+/* Titulo 1:  "Mundo Viajero" */
+.header h1{
+    font-size: 2.1em;
+}
+
+/* Titulo 2:  "By Abril Di Stasio" */
+.header h3{
+    font-family: 'Ephesis', cursive;
+    font-size: 1.3em;
+}
+
+/* NavBar */
+.menu1{
+    grid-area: menu;
+    background-color: rgb(70, 96, 120);
+}
+
+.menu1 ul{
+   display: flex;
+   justify-content: center;
+}
+
+.menu1 li{
+    position: relative;
+    bottom: 10px;
+    height: 45px;
+}
+
+.menu1 li a{
+    position: relative;
+    top: 10px;
+    padding: 40px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.menu1 li:hover{
+    background-color:rgb(86, 114, 140)
+}
+
+#btn-menu{
+    display: none;
+
+}
+
+nav label{
+    display: none;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+}
+
+nav label:hover{
+    cursor: pointer;
+    background-color: rgb(86, 114, 140);
+    border-radius: 20%;
+}
+
+
+.elementoMenu{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+
+/* Contenedor Padre - Main - uso de flexbox para ordenar items en el interior del grid */
+
+.principal{
+    grid-area: principal;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+}
+
+/* Contenedores Hijos - Main */
+.seccion1{
+    flex:70%;
+    background-color: rgb(255, 255, 255);
+}
+
+.icons{
+    padding: 2%;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-content: space-around;
+    column-gap: 0.5em;
+    row-gap: 0.5em;
+}
+
+.icon-text{
+    margin: 5px;
+    font-size: 0.8em;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.seccion2{
+    flex:30%;
+    gap: 10px 10px;
+    justify-content: center;
+    align-content: flex-end;
+    background-color: rgb(255, 255, 255);
+}
+
+
+h2{
+    margin: 3%;
+    font-family: 'Nunito', sans-serif;
+}
+
+.parrafo{
+    padding: 10px;
+    text-align: left;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.foto{
+    box-shadow: 2px 2px 5px #999;
+    border-radius: 2%;
+    align-content: center;
+    width: 245px;
+    height: 245px;
+    opacity: 0.7;
+    transition: opacity 2s;
+}
+
+.foto:hover{
+    opacity: 1;
+    width: 250px;
+    height: 250px;
+}
+
+
+
+/* Footer */
+
+.footer1{
+    grid-area: footer;
+    background-color: rgb(70, 96, 120);
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+/* ---*******       ********        *******---*/
+/* --- FORMULARIO / estilo con bootstrap --- */
+
+
+#form1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
+#legend1{
+    font-size: 1em;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+}
+
+#submit1{
+    position: relative;
+    top: 10px;
+}
+
+#footer{
+    font-size: 1em;
+}
+
+#mailform{
+    display:none;
+}
+
+#nombreform{
+    display:none;
+}
+
+#apellidoform{
+    display:none;
+}
+
+#comentarioform{
+    display:none;
+}
+
+
+
+/* ---*******               ********                  ********                    *******---*/
+/* --- SLIDERS - 3 contenedores con un nº de imagenes superpuestas(utilizando position relative/absolute)
+ el cual contiene un menu para seleccionar qué imagen se visualiza. (el contendor principal esta maquetado con
+ flexbox) --- */
+ 
+
+ /* --- Container Padre - Uso de flexbox --- */
+
+.section1-sliders{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+/* --- Containers Hijos - Se les aplica flexbox, y en su interior relative/absolute para superponer imagenes --- */
+
+.container-img1, .container-img2, .container-img3{
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    position: relative;
+}
+
+
+.section1-sliders ul, li{
+    list-style: none;
+}
+
+
+ /* --- Contenedor --- */
+
+ul.slider{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+
+}
+
+ /* --- Superposición de las imagenes --- */
+
+ul.slider li{
+    position: absolute;
+    left: 0;
+    top:0;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+}
+
+ /* --- Estilo de las imagenes --- */
+
+ul.slider li img{
+    box-shadow: 2px 2px 5px #999;
+    border-radius: 2%;
+    width: 300px;
+    height: 300px;
+}
+
+#slideCinco, #slideCuatro, #slideTres, #slideDos, #slideDos2, #slideTres2, #slideCuatro2, #slideCinco2, #slideDos3, #slideTres3, #slideCuatro3, #slideCinco3 {
+    opacity: 0;
+}
+
+#slideUno, #slideUno2, #slideUno3 {
+    opacity: 1;
+    animation-name: animacionUNO;
+    animation-duration: 5s;
+}
+
+@keyframes animacionUNO{
+    0%   {opacity: 0; }
+    100%  {opacity: 1; }
+}
+
+ /* --- Selección child img --- ** NO FUNCIONA ** 
+
+ul.slider li:first-child{
+    opacity: 1;
+}
+ /* --- Likear child al ID del menu --- ** NO FUNCIONA ** 
+
+ul.slider li:target{
+    opacity: 1;
+}
+
+ /* --- estilo menu con inline block--- */
+.menuslider{
+    text-align: center;
+    margin: 5px;
+}
+
+.menuslider li{
+    display: inline-block;
+    top: 100px;
+    margin-top: 350px;
+}
+
+.menuslider li a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(66, 67, 70);
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    font-size: 0.8em;
+    border-radius: 100%;
+}
+
+
+ /* --- Estilo de los titulos --- */
+
+.titleSlide{
+    padding: 10px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+}
+
+.titleSlideHide{
+    padding: 10px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    color: rgba(255, 255, 255, 0);
+}
+
+
+/* ---*******            ********           *******---*/
+/* --- SECCION HISTORIAS / Maquetado con flexbox --- */
+
+.seccionHistorias1{
+    padding: 5px;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.img-historias{
+    align-content: center;
+    align-self: center;
+}
+
+.img1{
+    box-shadow: 2px 2px 5px #999;
+    border-radius: 2%;
+}
+
+.titleHistorias{
+    flex-grow: 2;
+}
+
+.iFrame{
+    width: 350px;
+    height: 350px;
+    position: relative;
+    left: 100px;
+    box-shadow: 2px 2px 5px #999;
+    border-radius: 2%;
+}
+
+/* ---*******            ********           *******---*/
+/* --- Medias query --- */
+
+/* --- TABLET --- */
+@media (max-width: 950px){
+    .section1-sliders{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .grid-container{
+        display: grid;
+        gap: 2px;
+        grid-template:
+        "header" 100px
+        "menu" 180px
+        "principal" 
+        "footer" 50px;
+        }
+
+    .menu1{
+        flex-direction: column;
+        background-color: rgb(70, 96, 120);
+
+    }
+
+    .menu1 ul{
+        justify-content: center;
+        align-content: flex-start;
+        flex-direction: column;
+    }
+
+    .seccionHistorias1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+    }
+}
+
+/* --- CELULAR --- */
+
+
+@media (max-width:540px){
+
+    .grid-container{
+        display: grid;
+        gap: 2px;
+        grid-template:
+        "header" 100px
+        "menu" 70px
+        "principal" 
+        "footer" 50px;
+    }
+
+    .menu1{
+        flex-direction: column;
+        background-color: rgb(70, 96, 120);
+    }
+
+    .menu1 ul{
+        justify-content: center;
+        align-content: flex-start;
+        flex-direction: column;
+        margin-left: -700px;
+        margin-top: 200px;
+    }
+
+    .principal{
+        grid-area: principal;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav label{
+        display:block;
+    }
+
+    .menu1 li:hover{
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    #form1{
+        font-size: 1.5em;
+    }
+    #footer{
+        font-size: 1em;
+    }
+}
+
+@media (max-width:340px){
+    .button{
+        position: relative;
+        top: 5px;
+    }
+    #form1{
+        font-size: 1.4em;
+    }
+    #footer{
+        font-size: 0.8em;
+    }
+}
